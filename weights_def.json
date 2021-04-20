@@ -1,0 +1,166 @@
+[
+{
+"name": "fiscal year 1",
+"filter": "fiscal_year == 1",
+"target": 40,
+"targets": [
+{
+"name": "gender",
+"targets": [
+{
+"code": 1,
+"target": 40
+},
+{
+"code": 2,
+"target": 60
+}
+]
+},
+{
+"name": "age_group",
+"targets": [
+{
+"code": 1,
+"target": 10
+},
+{
+"code": 2,
+"target": 15
+},
+{
+"code": 3,
+"target": 10
+},
+{
+"code": 4,
+"target": 35
+},
+{
+"code": 5,
+"target": 30
+}
+]
+},
+{
+"name": "region",
+"targets": [
+{
+"code": 1,
+"target": 5
+},
+{
+"code": 2,
+"target": 10
+},
+{
+"code": 3,
+"target": 5
+},
+{
+"code": 4,
+"target": 25
+},
+{
+"code": 5,
+"target": 30
+},
+{
+"code": 6,
+"target": 10
+},
+{
+"code": 7,
+"target": 15
+}
+]
+}
+]
+},
+{
+"name": "fiscal years 2",
+"filter": "fiscal_year == 2 or fiscal_year == 3",
+"target": 60,
+"targets": [
+{
+"name": "gender",
+"targets": [
+{
+"code": 1,
+"target": 55
+},
+{
+"code": 2,
+"target": 45
+}
+]
+},
+{
+"name": "age_group",
+"targets": [
+{
+"code": 1,
+"target": 10
+},
+{
+"code": 2,
+"target": 15
+},
+{
+"code": 3,
+"target": 15
+},
+{
+"code": 4,
+"target": 25
+},
+{
+"code": 5,
+"target": 15
+},
+{
+"code": 6,
+"target": 10
+},
+{
+"code": 7,
+"target": 10
+}
+]
+},
+{
+"name": "region",
+"targets": [
+{
+"code": 1,
+"target": 10
+},
+{
+"code": 2,
+"target": 15
+},
+{
+"code": 3,
+"target": 15
+},
+{
+"code": 4,
+"target": 25
+},
+{
+"code": 5,
+"target": 15
+},
+{
+"code": 6,
+"target": 10
+},
+{
+"code": 7,
+"target": 10
+}
+]
+}
+]
+}
+]
