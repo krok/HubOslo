@@ -8,8 +8,10 @@ import quantipy as qp
 
 # CONFIG
 data_dir = 'data'
-if(len(sys.argv)==2):
+weighting_collumn='weighting'
+if(len(sys.argv)>1):
     data_dir = sys.argv[1]
+    weighting_collumn = sys.argv[2]
 weights_filename = 'weights_def.json'
 results_filename = 'results.json'
 schema_filename = 'schema.json'
@@ -49,6 +51,10 @@ scheme.group_targets(group_targets)
 dataset.weight(scheme, weight_name='weight', unique_key='responseid',inplace=True)
 
 # WRITE WEIGHTS
-weights = dataset.data().reindex(['responseid', 'weight'],axis='columns')
+dataset.data().reindex(['responseid', 'weight'],axis='columns')
+weights = dataset.data().rename(columns={'weight': weighting_collumn})
+weights = weights.reindex(['responseid', weighting_collumn],axis='columns')
+path = os.path.join(data_dir,  'results')
+os.mkdir(path) 
 with open(results_file, 'w', encoding='utf-8') as f:
         json.dump(weights.to_dict(orient='records'), f, ensure_ascii=False, indent=4)
